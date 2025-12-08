@@ -1,0 +1,97 @@
+/* ------- Galeria Base ------- */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 30px;
+  padding: 40px;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ------- Container com Portal Animado ------- */
+.portalContainer {
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.portalContainer:hover {
+  transform: scale(1.08);
+}
+
+/* ------- Efeito Portal Verdão Girando ------- */
+.portal {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  z-index: 1;
+  background: radial-gradient(circle, #00ff88 10%, #008840 60%, transparent 100%);
+  opacity: 0.7;
+
+  animation: girarPortal 4s linear infinite;
+  filter: blur(8px);
+}
+
+@keyframes girarPortal {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  100% {
+    transform: scale(1.1) rotate(360deg);
+  }
+}
+
+/* ------- Imagens ------- */
+.img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 12px;
+
+  position: relative;
+  z-index: 2;
+
+  box-shadow: 0 0 12px rgba(0, 255, 150, 0.4),
+              0 0 20px rgba(166, 255, 0, 0.2);
+
+  transition: 0.3s ease;
+}
+
+.portalContainer:hover .img {
+  box-shadow: 0 0 20px rgba(0, 255, 150, 0.8),
+              0 0 40px rgba(166, 255, 0, 0.6),
+              0 0 60px rgba(166, 255, 0, 0.4);
+}
+
+/* ------- Lightbox ------- */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+  z-index: 9999;
+}
+
+.lightboxImg {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+
+  box-shadow: 0 0 30px #00ff9c, 0 0 60px #a6ff00;
+  animation: zoomIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.7); }
+  to   { transform: scale(1); }
+}

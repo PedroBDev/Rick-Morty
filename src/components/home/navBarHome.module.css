@@ -1,0 +1,15 @@
+.container{
+    background-color: #111820;
+    font-family: 'Comic Sans MS', 'Orbitron', sans-serif;
+    text-shadow: 0 0 10px #00FF9C, 0 0 20px #A6FF00, 0 0 30px #A6FF00;
+    box-shadow: 0 0 15px #00ff9c80
+}
+
+@keyframes brilho {
+  0% {
+    text-shadow: 0 0 5px #00FF9C, 0 0 10px #A6FF00, 0 0 20px #A6FF00;
+  }
+  100% {
+    text-shadow: 0 0 20px #00FF9C, 0 0 40px #A6FF00, 0 0 60px #A6FF00;
+  }
+}
