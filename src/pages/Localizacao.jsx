@@ -92,7 +92,7 @@ export function LocationDetail() {
         const response = await fetch(`https://rickandmortyapi.com/api/location/${id}`);
         const data = await response.json();
 
-        // Busca completa de personagens residentes
+        
         const residents = await Promise.all(
           data.residents.map((url) => fetch(url).then((res) => res.json()))
         );
@@ -111,7 +111,7 @@ export function LocationDetail() {
 
   return (
     <div style={containerStyle}>
-      <Link to="/locations" style={backButtonStyle}>← Voltar</Link>
+      <Link to="/Localizacao" style={backButtonStyle}>← Voltar</Link>
 
       <h1 style={titleStyle}>{location.name}</h1>
       <p style={{ color: "#bbb" }}><strong>Tipo:</strong> {location.type}</p>

@@ -1,6 +1,6 @@
 import Botao from "./Botao";
 
-export default function Personagem({ personagem, abrirDetalhes }) {
+function Personagem({ personagem, abrirDetalhes }) {
   return (
     <div className="card">
       <img src={personagem.image} alt={personagem.name} />
@@ -10,3 +10,5 @@ export default function Personagem({ personagem, abrirDetalhes }) {
     </div>
   );
 }
+
+export default Personagem;

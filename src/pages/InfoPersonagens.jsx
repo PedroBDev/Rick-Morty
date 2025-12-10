@@ -1,10 +1,10 @@
     
 import { useEffect, useState } from "react";
-import Personagem from "./components/Personagem";
-import Modal from "./components/Modal";
-import "./App.css";x
+import Personagem from "../components/home/Personagem";
+import Modal from "../components/home/Modal";
+import "./infoPersonagens.css";
 
-function App() {
+function InfoPersonagens() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -45,7 +45,7 @@ function App() {
           <Personagem
             key={p.id}
             personagem={p}
-            abrirDetalhes={() => setPersonagemSelecionado(p)}
+            abrirDetalhes={()=> setPersonagemSelecionado(p)}
           />
         ))}
       </div>

@@ -49,7 +49,7 @@ body {
 }
 
 
-.modalOver{
+.meumodalOver{
   position: fixed;
   top: 0;
   left: 0;
@@ -61,7 +61,7 @@ body {
   align-items: center;
 }
 
-.modal {
+.meumodal {
   background: #222;
   padding: 20px;
   border-radius: 12px;
