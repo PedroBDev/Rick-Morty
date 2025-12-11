@@ -1,0 +1,46 @@
+.container {
+  padding: 20px;
+  font-family: 'Trebuchet MS', sans-serif;
+  color: #00ff9f;
+  background-color: #0d0d0d;
+  min-height: 100vh;
+}
+
+.title {
+  color: #00ff9f;
+  text-shadow: 0 0 10px #00ff9f;
+}
+
+.card {
+  background: #1a1a1a;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #00ff9f;
+  box-shadow: 0 0 8px #00ff9f55;
+}
+
+.button {
+  background: #00ff9f;
+  color: #000;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.backButton {
+  background: #008f66;
+  color: #fff;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 20px;
+}

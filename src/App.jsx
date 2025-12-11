@@ -4,8 +4,8 @@ import Home from './pages/home/home'
 import "bootstrap/dist/css/bootstrap.min.css"; 
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import Sobre from './pages/sobre/Sobre';
-import InfoPersonagens from './pages/InfoPersonagens';
-import Localizacao, {LocationDetail} from './pages/Localizacao';
+import InfoPersonagens from './pages/personagens/InfoPersonagens';
+import Localizacao, {LocationDetail} from './pages/localizacao/Localizacao';
 import ResumoSobre from './pages/sobre/resumoSobre';
 import Galeria from './pages/sobre/images'
 

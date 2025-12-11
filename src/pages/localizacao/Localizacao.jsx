@@ -1,46 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-
-const containerStyle = {
-  padding: "20px",
-  fontFamily: "'Trebuchet MS', sans-serif",
-  color: "#00ff9f",
-  backgroundColor: "#0d0d0d",
-  minHeight: "100vh",
-};
-
-const titleStyle = {
-  color: "#00ff9f",
-  textShadow: "0 0 10px #00ff9f",
-};
-
-const cardStyle = {
-  background: "#1a1a1a",
-  padding: "12px",
-  marginBottom: "12px",
-  borderRadius: "8px",
-  border: "1px solid #00ff9f",
-  boxShadow: "0 0 8px #00ff9f55",
-};
-
-const buttonStyle = {
-  background: "#00ff9f",
-  color: "#000",
-  padding: "8px 14px",
-  border: "none",
-  borderRadius: "6px",
-  cursor: "pointer",
-  fontWeight: "bold",
-  textDecoration: "none",
-};
-
-const backButtonStyle = {
-  ...buttonStyle,
-  background: "#008f66",
-  color: "#fff",
-  marginBottom: "20px",
-};
-
+import styles from "./localizacao.module.css";
 
 export function LocationList() {
   const [locations, setLocations] = useState([]);
@@ -64,15 +24,15 @@ export function LocationList() {
   if (loading) return <p style={{ color: "#fff" }}>Carregando...</p>;
 
   return (
-    <div style={containerStyle}>
-      <h1 style={titleStyle}>Localizações — Rick and Morty</h1>
+    <div className={styles.container}>
+      <h1 className={styles.title}>Localizações — Rick and Morty</h1>
 
       {locations.map((loc) => (
-        <div key={loc.id} style={cardStyle}>
+        <div key={loc.id} className={styles.card}>
           <h3 style={{ color: "#00ff9f" }}>{loc.name}</h3>
           <p style={{ color: "#ccc" }}>Tipo: {loc.type}</p>
 
-          <Link to={`/locations/${loc.id}`} style={buttonStyle}>
+          <Link to={`/locations/${loc.id}`} className={styles.button}>
             Ver detalhes
           </Link>
         </div>
@@ -92,7 +52,6 @@ export function LocationDetail() {
         const response = await fetch(`https://rickandmortyapi.com/api/location/${id}`);
         const data = await response.json();
 
-        
         const residents = await Promise.all(
           data.residents.map((url) => fetch(url).then((res) => res.json()))
         );
@@ -110,10 +69,12 @@ export function LocationDetail() {
   if (loading) return <p style={{ color: "#fff" }}>Carregando...</p>;
 
   return (
-    <div style={containerStyle}>
-      <Link to="/Localizacao" style={backButtonStyle}>← Voltar</Link>
+    <div className={styles.container}>
+      <Link to="/Localizacao" className={styles.backButton}>
+        ← Voltar
+      </Link>
 
-      <h1 style={titleStyle}>{location.name}</h1>
+      <h1 className={styles.title}>{location.name}</h1>
       <p style={{ color: "#bbb" }}><strong>Tipo:</strong> {location.type}</p>
       <p style={{ color: "#bbb" }}><strong>Dimensão:</strong> {location.dimension}</p>
 
@@ -123,7 +84,7 @@ export function LocationDetail() {
         <p style={{ color: "#fff" }}>Nenhum personagem nesta localização.</p>
       ) : (
         location.residents.map((char) => (
-          <div key={char.id} style={cardStyle}>
+          <div key={char.id} className={styles.card}>
             <h3 style={{ color: "#00ff9f" }}>{char.name}</h3>
             <p style={{ color: "#ccc" }}>Status: {char.status}</p>
             <p style={{ color: "#ccc" }}>Espécie: {char.species}</p>

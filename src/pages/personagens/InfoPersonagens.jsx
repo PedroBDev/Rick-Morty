@@ -1,7 +1,7 @@
     
 import { useEffect, useState } from "react";
-import Personagem from "../components/home/Personagem";
-import Modal from "../components/home/Modal";
+import Personagem from "../../components/home/Personagem";
+import Modal from "../../components/home/Modal";
 import "./infoPersonagens.css";
 
 function InfoPersonagens() {
