@@ -1,6 +1,6 @@
-// /pages/sobre/ResumoSobre.jsx
+
 import React from "react";
-import styles from "./resumoSobre.module.css"; // nome do arquivo CSS module abaixo
+import styles from "./resumoSobre.module.css"; 
 
 function ResumoSobre() {
   return (

@@ -20,9 +20,9 @@ function Galeria() {
 
   return (
     <>
-      {/* GALERIA */}
+      
       <div className={styles.galeria}>
-        {/* CORREÇÃO AQUI: Mudança de 'imagens' para 'imagensRickAndMorty' */}
+        
         {imagensRickAndMorty.map((url, index) => (
           <div
             key={index}
@@ -34,11 +34,8 @@ function Galeria() {
           </div>
         ))}
       </div>
-
-      {/* LIGHTBOX */}
       {imagemSelecionada && (
         <div className={styles.lightbox} onClick={() => setImagemSelecionada(null)}>
-          {/* O stopPropagation impede que o clique na imagem feche o Lightbox */}
           <img 
             className={styles.lightboxImg} 
             src={imagemSelecionada} 

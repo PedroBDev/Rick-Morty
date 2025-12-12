@@ -1,11 +1,11 @@
-/* Fundo geral da página */
+
 body {
   background-color: #2a2d35 !important;
 }
 
 
 .sobreContainer {
-  background-color: #2a2d35; /* cor que você pediu */
+  background-color: #2a2d35; 
   padding: 40px 30px;
   max-width: 1000px;
   margin: 80px auto;
@@ -15,17 +15,17 @@ body {
   animation: aparecer 0.4s ease-in-out;
 }
 
-/* Título principal */
+
 .tituloSobre {
   font-size: 2.8rem;
   font-weight: 700;
-  color: #2e003e; /* cor solicitada */
+  color: #2e003e; 
   margin-bottom: 25px;
   text-align: center;
   animation: brilho 2s infinite alternate;
 }
 
-/* Subtítulos */
+
 .subtitulo {
   font-size: 1.7rem;
   font-weight: 600;
@@ -35,7 +35,7 @@ body {
   animation: brilho 2s infinite alternate;
 }
 
-/* Texto geral */
+
 .textoSobre {
   font-size: 1.15rem;
   line-height: 1.8;
@@ -43,7 +43,7 @@ body {
   margin-bottom: 20px;
 }
 
-/* Listas */
+
 ul {
   margin-left: 20px;
   font-size: 1.15rem;
@@ -51,7 +51,7 @@ ul {
   color: #d9dee7;
 }
 
-/* Animação de brilho (a que você pediu) */
+
 @keyframes brilho {
   0% {
     text-shadow: 
@@ -67,7 +67,7 @@ ul {
   }
 }
 
-/* efeito de fade suave ao carregar */
+
 @keyframes aparecer {
   from {
     opacity: 0;
@@ -79,7 +79,7 @@ ul {
   }
 }
 
-/* Responsividade */
+
 @media (max-width: 768px) {
   .sobreContainer {
     padding: 25px;

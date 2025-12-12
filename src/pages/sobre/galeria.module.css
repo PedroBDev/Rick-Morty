@@ -1,4 +1,4 @@
-/* ------- Galeria Base ------- */
+
 .galeria {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -9,7 +9,7 @@
   margin: 0 auto;
 }
 
-/* ------- Container com Portal Animado ------- */
+
 .portalContainer {
   position: relative;
   cursor: pointer;
@@ -20,7 +20,7 @@
   transform: scale(1.08);
 }
 
-/* ------- Efeito Portal Verdão Girando ------- */
+
 .portal {
   position: absolute;
   inset: 0;
@@ -42,7 +42,7 @@
   }
 }
 
-/* ------- Imagens ------- */
+
 .img {
   width: 100%;
   height: 230px;
@@ -64,7 +64,7 @@
               0 0 60px rgba(166, 255, 0, 0.4);
 }
 
-/* ------- Lightbox ------- */
+
 .lightbox {
   position: fixed;
   inset: 0;

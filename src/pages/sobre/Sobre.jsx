@@ -2,7 +2,7 @@ import styles from './sobre.module.css'
 import { useNavigate } from "react-router-dom";
 
 function Sobre(){
-    const navigate = useNavigate(); //usado para navegação utilizando botões
+    const navigate = useNavigate(); 
     return(
         <>
         <div className={styles.container}>
